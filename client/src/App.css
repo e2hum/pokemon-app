@@ -1,0 +1,161 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+input[type="text"] {
+  padding: 10px 15px; /* Add some padding */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border with transparency */
+  border-radius: 5px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  outline: none; /* Remove outline on focus */
+  transition: border-color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus {
+  border-color: rgba(255, 255, 255, 0.8); /* Darker border on focus */
+  background-color: rgba(255, 255, 255, 0.4); /* Slightly darker background on focus */
+}
+
+html, body {
+  height: 100%; /* Ensure the body takes the full height */
+  margin: 0; /* Remove default margins */
+}
+
+body {
+  background-image: url('./assets/pokemon_bg.webp'); /* Path to your background image */
+  background-size: cover; 
+  background-position: center; 
+  color: white; 
+  position: relative;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25); /* Adjust the last value to change darkness */
+  z-index: -1; 
+}
+
+.App {
+  min-height: 100vh; /* Ensure the App container is at least full height */
+  padding: 20px; /* Optional: Add some padding for content */
+  position: relative; /* Needed if you add an overlay */
+}
+
+.pokemon-list {
+  padding: 20px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Three equal columns */
+  gap: 10px; /* Space between buttons */
+}
+
+.tabs {
+  display: flex;
+  justify-content: center; /* Evenly distribute space around buttons */
+  align-items: center; /* Center items vertically */
+  height: 50px; /* Set a fixed height for the tabs */
+  margin-bottom: 20px; /* Space below tabs */
+}
+
+.tabs button {
+  flex: 0 0 300px; /* Prevent stretching by setting a base size */
+  padding: 20px; /* Consistent padding */
+  border: 1px solid #ccc; /* Border around the button */
+  background-color: rgba(0, 0, 0, 0.25); /* Default background */
+  cursor: pointer;
+  text-align: center; /* Center text */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.tabs button.active {
+  background-color: rgba(0, 0, 0, 0.9); /* Active tab background */
+  font-weight: bold; /* Bold text for active tab */
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: flex-start; /* Align dropdowns to the top */
+  gap: 20px; /* Adds space between dropdown items */
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column; /* Stack title and dropdown vertically */
+  align-items: center; /* Center title and dropdown */
+  min-width: 10px; /* Set a minimum width for consistency */
+}
+
+.table-container {
+  max-height: 400px; /* Set a max height for the table */
+  overflow-y: auto; /* Add vertical scrolling */
+  margin-top: 20px; /* Space above the table */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures that borders are collapsed */
+  margin-top: 20px; /* Adds some space above the table */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Adds a light gray border */
+  padding: 8px; /* Adds padding for spacing */
+  text-align: left; /* Aligns text to the left */
+}
+
+th {
+  background-color: #797979; /* Light gray background for headers */
+}
+
+tr:hover {
+  background-color: #797979; /* Light background color on hover for rows */
+}
